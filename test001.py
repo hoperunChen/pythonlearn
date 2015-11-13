@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-  
 # one day console in & console out 控制台输入和输出练习
 print 'console out'
