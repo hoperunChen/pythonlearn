@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-  
-# 生成式
+# 生成器
 def _print(msg=''):
 	print _toUtf8(msg)
 
