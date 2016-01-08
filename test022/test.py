@@ -11,8 +11,7 @@ import person as p
 
 person = p.Person()
 
-print person.name # 成员变量是直接可以访问的
+print person._Person__name 
 person.setName('ssss') #可以使用set修改成员变量
-person.sayHello() #通过方法获取成员变量
+person.getName() #通过方法获取成员变量
  #员变量被修改
-print person.name

@@ -4,13 +4,15 @@
 
 class Person(object):
 	"""docstring for Person"""
+
+	#类的初始化
 	def __init__(self):
 		super(Person, self).__init__()
-		self._age = 111
-
-	name = 'aaaa'
+		self.__age = 111
+		self.__name = 'aaaa'
+	#类的方法的第一个参数都是self,并且调用的时候不需要传递
 	def setName(self,name):
-		self.name = name
+		self.__name = name
 
-	def sayHello(self):
-		print self.name
+	def getName(self):
+		print self.__name
