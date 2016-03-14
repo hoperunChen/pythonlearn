@@ -9,6 +9,20 @@ class DbHelper(object):
 		self.path = path
 		self.conn = None
 
+	def covtUtf8(self,data):
+		if isinstance(data, str):
+			return data.decode('gbk').encode('utf-8')
+		else:
+			return data
+
+	def covtGBK(self,data):
+		newData = []
+		for d in data:
+			_temp = d
+			if isinstance(d, str):
+				_temp = d.decode('utf-8').encode('gbk')
+			newData.append(_temp)
+		return newData
 
 	def getConn(self):
 		self.conn = sqlite3.connect(self.path)
@@ -30,23 +44,39 @@ class DbHelper(object):
 				fieldSql = fieldSql + " "
 		return fieldSql
 
+	def executeQueryParams(self,sql,params):
+		print sql
+		params = filter(self.covtUtf8, params)
+		print params
+		cursor = self.getConn()
+		cursor.execute(sql,params)
+		values = cursor.fetchall()
+		self.close(cursor)
+
+		new_values = []
+		for data in values:
+			data = self.covtGBK(data)
+			new_values.append(data)
+		return new_values
+
 	def executeQuery(self,sql):
 		print sql
 		cursor = self.getConn()
 		cursor.execute(sql)
 		values = cursor.fetchall()
 		self.close(cursor)
-		return values
+
+		new_values = []
+		for data in values:
+			data = self.covtGBK(data)
+			new_values.append(data)
+		return new_values
 
 	def execute(self,sql,params):
 		flag = True
 		print sql
-		def covtUtf8(param):
-			if isinstance(param, str):
-				return param.decode('gbk').encode('utf-8')
-			else:
-				return param
-		params = filter(covtUtf8, params)
+		
+		params = filter(self.covtUtf8, params)
 		print params
 		cursor = None
 		try:
@@ -93,10 +123,12 @@ class DbHelper(object):
 
 if __name__  == '__main__':
 	cf = DbHelper("test.db")
-	# values = cf.queryAll('TEST_TABLE')
+	# values = cf.executeQueryParams("select * from TEST_TABLE where NAME = ?", ('陈锐',))
+	# print values
+	values = cf.queryAll('TEST_TABLE')
 	# values = cf.query(['id'],'TEST_TABLE')
-	# for id in values:
-		# print id 
+	for id,name in values:
+		print id + '-->' +name
 	# cf.execute("insert into TEST_TABLE(id,NAME) values(?,?)", (2,'陈锐2'))
 	# cf.insert("TEST_TABLE", (2,'陈锐2'))
 	# cf.insertWithFields("TEST_TABLE",['id','NAME'], (2,'陈锐2'))
