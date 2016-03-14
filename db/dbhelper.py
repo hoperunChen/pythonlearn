@@ -101,9 +101,23 @@ class DbHelper(object):
 		values = self.executeQuery(sql)
 		return values
 
+	'''
+		插入数据
+		params:
+			tableName:表名
+			params:参数列表 (1,'陈锐3')
+	'''
 	def insert(self,tableName,params):
 		return self.insertWithFields(tableName, None, params)
 
+
+	'''
+		插入数据
+		params:
+			tableName:表名
+			fields:名称列表 ['id','name']
+			params:参数列表 (1,'陈锐3')
+	'''
 	def insertWithFields(self,tableName,fields,params):
 		fieldsSql = ""
 		if None != fields and len(fields) > 0:
