@@ -45,9 +45,9 @@ class DbHelper(object):
 		return fieldSql
 
 	def executeQueryParams(self,sql,params):
-		print sql
-		params = filter(self.covtUtf8, params)
-		print params
+		#print sql
+		#params = filter(self.covtUtf8, params)
+		#print params
 		cursor = self.getConn()
 		cursor.execute(sql,params)
 		values = cursor.fetchall()
@@ -59,25 +59,27 @@ class DbHelper(object):
 			new_values.append(data)
 		return new_values
 
-	def executeQuery(self,sql):
-		print sql
+	def executeQuery(self,sql,params = None):
+		#print sql
 		cursor = self.getConn()
-		cursor.execute(sql)
+		if None == params:
+			cursor.execute(sql)
+		else:
+			cursor.execute(sql,params)
 		values = cursor.fetchall()
 		self.close(cursor)
 
 		new_values = []
 		for data in values:
-			data = self.covtGBK(data)
+			#data = self.covtGBK(data)
 			new_values.append(data)
 		return new_values
 
 	def execute(self,sql,params):
 		flag = True
-		print sql
-		
-		params = filter(self.covtUtf8, params)
-		print params
+		#print sql
+		#params = filter(self.covtUtf8, params)
+		#print params
 		cursor = None
 		try:
 			cursor = self.getConn()
@@ -141,8 +143,8 @@ if __name__  == '__main__':
 	# print values
 	values = cf.queryAll('TEST_TABLE')
 	# values = cf.query(['id'],'TEST_TABLE')
-	for id,name in values:
-		print id + '-->' +name
+	#for id,name in values:
+		#print id + '-->' +name
 	# cf.execute("insert into TEST_TABLE(id,NAME) values(?,?)", (2,'陈锐2'))
 	# cf.insert("TEST_TABLE", (2,'陈锐2'))
 	# cf.insertWithFields("TEST_TABLE",['id','NAME'], (2,'陈锐2'))
