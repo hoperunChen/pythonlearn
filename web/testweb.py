@@ -6,14 +6,12 @@ from flask import request
 from flask import render_template
 
 
-
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+  return render_template('home.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-    #return '<h1>Home</h1>'
-    return render_template('home.html')
 
 
 @app.route('/signin', methods=['GET'])
@@ -38,4 +36,5 @@ def hello():
     return '<h3>test Hello rest</h3>'
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
