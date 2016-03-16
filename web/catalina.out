@@ -1,0 +1,385 @@
+Feb 22, 2016 5:27:42 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Feb 22, 2016 5:27:42 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Feb 22, 2016 5:27:42 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 331 ms
+Feb 22, 2016 5:27:42 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Feb 22, 2016 5:27:42 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.28
+Feb 22, 2016 5:27:42 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Feb 22, 2016 5:27:42 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Feb 22, 2016 5:27:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/tomcat/webapps/ROOT/WEB-INF/lib/logback-classic-0.9.27.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/tomcat/webapps/ROOT/WEB-INF/lib/slf4j-jdk14-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17:27:49.707 ERROR org.hibernate.util.JDBCExceptionReporter - An attempt by a client to checkout a Connection has timed out.
+17:28:00.350 ERROR org.hibernate.util.JDBCExceptionReporter - An attempt by a client to checkout a Connection has timed out.
+17:28:00.359 ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate - could not get database metadata
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:65) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:527) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81) ~[spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:356) [hibernate-3.3.2.jar:na]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1341) [hibernate-3.3.2.jar:na]
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:547) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:547) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) [spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) [spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1041) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:964) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321) [catalina.jar:6.0.28]
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581) [catalina.jar:6.0.28]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_71]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289) [bootstrap.jar:6.0.28]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414) [bootstrap.jar:6.0.28]
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@6c8185d3 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1317) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	... 86 common frames omitted
+17:28:00.362 ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate - could not complete schema update
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:65) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:527) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81) ~[spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:168) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:356) [hibernate-3.3.2.jar:na]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1341) [hibernate-3.3.2.jar:na]
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211) [spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:547) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:547) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:844) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:786) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:703) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:474) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:282) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580) [spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) [spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) [spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1041) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:964) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321) [catalina.jar:6.0.28]
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581) [catalina.jar:6.0.28]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_71]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289) [bootstrap.jar:6.0.28]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414) [bootstrap.jar:6.0.28]
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@6c8185d3 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1317) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	... 86 common frames omitted
+17:28:10.469 ERROR org.hibernate.util.JDBCExceptionReporter - An attempt by a client to checkout a Connection has timed out.
+17:28:10.471 ERROR org.hibernate.util.JDBCExceptionReporter - An attempt by a client to checkout a Connection has timed out.
+17:28:10.532 ERROR org.springframework.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loadTask' defined in ServletContext resource [/WEB-INF/config/quartz-task.xml]: Invocation of init method failed; nested exception is org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:580) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring.context-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:276) ~[spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:197) ~[spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47) [spring.web-3.0.5.jar:3.0.5.RELEASE]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4135) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4630) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1041) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:964) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321) [catalina.jar:6.0.28]
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:785) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardService.start(StandardService.java:519) [catalina.jar:6.0.28]
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:710) [catalina.jar:6.0.28]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:581) [catalina.jar:6.0.28]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_71]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289) [bootstrap.jar:6.0.28]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414) [bootstrap.jar:6.0.28]
+Caused by: org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:596) ~[spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:371) ~[spring.transaction-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:335) ~[spring.transaction-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105) ~[spring.transaction-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172) ~[spring.aop-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202) ~[spring.aop-3.0.5.jar:3.0.5.RELEASE]
+	at com.sun.proxy.$Proxy9.getList(Unknown Source) ~[na:na]
+	at com.jeecms.cms.task.LoadTask.loadTask(LoadTask.java:29) ~[LoadTask.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_71]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_71]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_71]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_71]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1544) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1485) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417) ~[spring.beans-3.0.5.jar:3.0.5.RELEASE]
+	... 36 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:126) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:114) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167) ~[hibernate-3.3.2.jar:na]
+	at org.hibernate.jdbc.BorrowedConnectionProxy.invoke(BorrowedConnectionProxy.java:74) ~[hibernate-3.3.2.jar:na]
+	at com.sun.proxy.$Proxy10.setReadOnly(Unknown Source) ~[na:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.prepareConnectionForTransaction(DataSourceUtils.java:155) ~[spring.jdbc-3.0.5.jar:3.0.5.RELEASE]
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:508) ~[spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	... 50 common frames omitted
+Caused by: java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:65) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:527) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:81) ~[spring.orm-3.0.5.jar:3.0.5.RELEASE]
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446) ~[hibernate-3.3.2.jar:na]
+	... 55 common frames omitted
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@6c8185d3 -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1317) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	... 58 common frames omitted
+Feb 22, 2016 5:28:10 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+Feb 22, 2016 5:28:10 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [] startup failed due to previous errors
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JBDC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-6] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-7] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-8] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-9] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [scheduler_Worker-10] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Feb 22, 2016 5:28:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Feb 22, 2016 5:28:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Feb 22, 2016 5:28:10 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Feb 22, 2016 5:28:10 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Feb 22, 2016 5:28:10 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Feb 22, 2016 5:28:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 28806 ms
+Feb 22, 2016 5:28:10 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load java.net.BindException.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1531)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1491)
+	at com.mysql.jdbc.SQLError.createLinkFailureMessageBasedOnHeuristics(SQLError.java:1217)
+	at com.mysql.jdbc.exceptions.jdbc4.CommunicationsException.<init>(CommunicationsException.java:57)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1074)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2214)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:773)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:352)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+
+Exception in thread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2" Exception in thread "com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1" java.lang.NullPointerException
+	at com.mchange.v2.log.log4j.Log4jMLog$Log4jMLogger.isLoggable(Log4jMLog.java:257)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:551)
+java.lang.NullPointerException
+	at com.mchange.v2.log.log4j.Log4jMLog$Log4jMLogger.isLoggable(Log4jMLog.java:257)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:551)
